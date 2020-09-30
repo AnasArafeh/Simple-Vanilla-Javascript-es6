@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Employees Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="index.js"></script>
+    <script src="addItem.js"></script>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      td {
+        text-align: center;
+      }
+      label {
+        display: table-cell;
+      }
+      input {
+        display: table-cell;
+      }
+      #popup {
+        width: 50%;
+        height: 300px;
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin: -150px 0 0 -150px;
+      }
+    </style>
+
+    <script></script>
+  </head>
+  <body>
+    <h2>Employees Form</h2>
+    <div id="recipe-form">
+      <form id="add-an-ingredient">
+        <label for="name" id="first">Name:</label>
+        <input type="text" id="name" />
+
+        <label for="email" id="second">Email:</label>
+        <input type="text" id="email" />
+
+        <label for="mobile" id="third">Mobile:</label>
+        <input type="text" id="mobile" />
+
+        <label for="address" id="fourth">Address:</label>
+        <input type="text" id="address" /><br /><br />
+
+        <input type="submit" name="submit" id="submit" value="Add Employee" />
+      </form>
+    </div>
+    <div>
+      <h3>Employee List</h3>
+      <div id="popup">
+        <table style="width: 100%">
+          <thead>
+            <th class="thBorder">Name</th>
+            <th class="thBorder">Email</th>
+            <th class="thBorder">Mobile</th>
+            <th class="thBorder">Address</th>
+          </thead>
+          <tbody id="pantry"></tbody>
+        </table>
+      </div>
+      <input type="submit" name="submit1" id="submit1" value="Show Popup" />
+    </div>
+  </body>
+</html>
